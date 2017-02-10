@@ -1,9 +1,3 @@
-/*
- * 파일이름: HighCreditAccount.h
- * 작성자: 윤성우
- * 업데이트 정보: [2010, 09, 01] 파일버전 0.92
- */
-
 #ifndef __HIGHCREDIT_ACCOUNT_H__
 #define __HIGHCREDIT_ACCOUNT_H__
 

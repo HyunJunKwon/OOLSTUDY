@@ -1,9 +1,3 @@
-/*
- * 파일이름: AccountHandler.cpp
- * 작성자: 윤성우
- * 업데이트 정보: [2010, 09, 01] 파일버전 0.82
- */
-
 #include "BankingCommonDecl.h"
 #include "AccountHandler.h"
 #include "Account.h"

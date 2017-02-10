@@ -1,9 +1,3 @@
-/*
- * 파일이름: Account.cpp
- * 작성자: 윤성우
- * 업데이트 정보: [2010, 09, 01] 파일버전 0.92
- */
-
 #include "BankingCommonDecl.h"
 #include "Account.h"
 #include "AccountException.h"

@@ -1,9 +1,3 @@
-/*
- * 파일이름: BoundCheckArray.h
- * 작성자: 윤성우
- * 업데이트 정보: [2010, 09, 01] 파일버전 0.12
- */
-
 #ifndef __BOUND_CHECK_ARRAY_H__
 #define __BOUND_CHECK_ARRAY_H__
 

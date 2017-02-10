@@ -1,11 +1,3 @@
-/*
- * 소프트웨어 버전: Banking System Ver 0.92 
- * 
- * 파일이름: BankingSystemMain.cpp
- * 작성자: 윤성우
- * 업데이트 정보: [2010, 09, 01] 파일버전 0.72
- */
-
 #include "BankingCommonDecl.h"
 #include "AccountHandler.h"
 
