@@ -120,7 +120,6 @@ public class PolymorphismDemo1 {
     }
 }
 /*
-```	
 B.x
 B2.x
 */
