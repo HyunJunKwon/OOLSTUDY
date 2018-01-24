@@ -3,6 +3,7 @@
 <br/>
 
 * 이 개념 정리는 [생활코딩](https://opentutorials.org/course/1223)을 참고하였다.
+* 또한 A ~ Z의 개념정리가 아닌 C, C++와 다른 Java 특유의 문법만을 정리해 놓았다.
 
 
 ### Java의 역사
