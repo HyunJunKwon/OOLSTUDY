@@ -1,9 +1,9 @@
 /*
-static °³³ä.
-Àü¿ªº¯¼ö¿¡ ¼±¾ğµÈ staticÀÇ ÀÇ¹Ì
--> ¼±¾ğµÈ ÆÄÀÏ ³»¿¡¼­¸¸ ÂüÁ¶¸¦ Çã¿ëÇÏ°Ú´Ù´Â ÀÇ¹Ì
-ÇÔ¼ö ³»¿¡ ¼±¾ğµÈ staticÀÇ ÀÇ¹Ì
--> ÇÑ¹ø¸¸ ÃÊ±âÈ­µÇ°í, Áö¿ªº¯¼ö¿Í ´Ş¸® ÇÔ¼ö¸¦ ºüÁ®³ª°¡µµ ¼Ò¸êµÇÁö ¾Ê´Â´Ù.
+static ê°œë….
+ì „ì—­ë³€ìˆ˜ì— ì„ ì–¸ëœ staticì˜ ì˜ë¯¸
+-> ì„ ì–¸ëœ íŒŒì¼ ë‚´ì—ì„œë§Œ ì°¸ì¡°ë¥¼ í—ˆìš©í•˜ê² ë‹¤ëŠ” ì˜ë¯¸
+í•¨ìˆ˜ ë‚´ì— ì„ ì–¸ëœ staticì˜ ì˜ë¯¸
+-> í•œë²ˆë§Œ ì´ˆê¸°í™”ë˜ê³ , ì§€ì—­ë³€ìˆ˜ì™€ ë‹¬ë¦¬ í•¨ìˆ˜ë¥¼ ë¹ ì ¸ë‚˜ê°€ë„ ì†Œë©¸ë˜ì§€ ì•ŠëŠ”ë‹¤.
 */
 #include <iostream>
 using namespace std;
@@ -16,10 +16,10 @@ public:
 	SoSimple()
 	{
 		simObjCnt++;
-		cout<<simObjCnt<<"¹øÂ° SoSimple °´Ã¼"<<endl;
+		cout << simObjCnt << "th SoSimple object" << endl;
 	}
 };
-int SoSimple::simObjCnt=0; // ¸Ş¸ğ¸® °ø°£¿¡ ÇÒ´çÇÏ±â ¶§¹®¿¡ º°µµ·Î ¼±¾ğ!!!!  
+int SoSimple::simObjCnt = 0; // ë©”ëª¨ë¦¬ ê³µê°„ì— í• ë‹¹í•˜ê¸° ë•Œë¬¸ì— ë³„ë„ë¡œ ì„ ì–¸!!!!  
 
 class SoComplex
 {
@@ -28,25 +28,25 @@ private:
 public:
 	SoComplex()
 	{
-		// simObjCnt = 0;  <- Æ²¸°¹®Àå!!!! ÀÌ¹Ì ÇÒ´çÀÌ·ç¾îÁ³±â ¶§¹®,. 
+		// simObjCnt = 0;  <- í‹€ë¦°ë¬¸ì¥!!!! ì´ë¯¸ í• ë‹¹ì´ë£¨ì–´ì¡Œê¸° ë•Œë¬¸,. 
 		cmxObjCnt++;
-		cout<<cmxObjCnt<<"¹øÂ° SoComplex °´Ã¼"<<endl;
+		cout << cmxObjCnt << "th SoComplex object" << endl;
 	}
 	SoComplex(SoComplex &copy)
 	{
 		cmxObjCnt++;
-		cout<<cmxObjCnt<<"¹øÂ° SoComplex °´Ã¼"<<endl;
+		cout << cmxObjCnt << "th SoComplex object" << endl;
 	}
 };
-int SoComplex::cmxObjCnt=0;
+int SoComplex::cmxObjCnt = 0;
 
 int main(void)
 {
-	SoSimple sim1;
+	SoSimple sim1; // ì´ˆê¸°í™”ê°€ ë˜ë©´ì„œ cout ì¶œë ¥
 	SoSimple sim2;
 
 	SoComplex cmx1;
-	SoComplex cmx2=cmx1;
+	SoComplex cmx2 = cmx1;
 	SoComplex();
 	return 0;
 }
