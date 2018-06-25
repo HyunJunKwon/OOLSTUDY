@@ -8,16 +8,16 @@ private:
 public:
 	SoSimple(int n) : num(n)
 	{ }
-	SoSimple& AddNum(int n)
-	{
-		num += n;
-		return *this;
-	}
+	//SoSimple& AddNum(int n)
+	//{
+	//	num += n;
+	//	return *this;
+	//}
 	void SimpleFunc()
 	{
 		cout << "SimpleFunc: " << num << endl;
 	}
-	void SimpleFunc() const // 26 ¶óÀÎ ½ÇÇàµÉ ¶§, 20 ¶óÀÎ ½ÇÇàµÈ´Ù... 
+	void SimpleFunc() const // 26 ë¼ì¸ ì‹¤í–‰ë  ë•Œ, 20 ë¼ì¸ ì‹¤í–‰ëœë‹¤... 
 	{
 		cout << "const SimpleFunc: " << num << endl;
 	}
@@ -32,11 +32,11 @@ int main(void)
 {
 	SoSimple obj1(2);
 	const SoSimple obj2(7);
-	obj1.SimpleFunc(); 
-	obj2.SimpleFunc(); 
-	/* À§ µÎ ¹®ÀåÀÌ ½ÇÇàµÉ ¶§¿¡´Â class¾È¿¡ const·Î Á¤ÀÇµÇÀÖ´ÂÁö¿¡ µû¶ó
-	½ÇÇàµÇÁö¸¸, ¹ØÀÇ µÎ ¹®ÀåÀº YourFunc(const class)ÀÌ¹Ç·Î ¹«Á¶°Ç const·Î
-	Á¤ÀÇµÈ ÇÔ¼ö°¡ ½ÇÇà.
+	obj1.SimpleFunc();
+	obj2.SimpleFunc();
+	/* ìœ„ ë‘ ë¬¸ìž¥ì´ ì‹¤í–‰ë  ë•Œì—ëŠ” classì•ˆì— constë¡œ ì •ì˜ë˜ìžˆëŠ”ì§€ì— ë”°ë¼
+	ì‹¤í–‰ë˜ì§€ë§Œ, ë°‘ì˜ ë‘ ë¬¸ìž¥ì€ YourFunc(const class)ì´ë¯€ë¡œ ë¬´ì¡°ê±´ constë¡œ
+	ì •ì˜ëœ í•¨ìˆ˜ê°€ ì‹¤í–‰.
 	*/
 	YourFunc(obj1);
 	YourFunc(obj2);
