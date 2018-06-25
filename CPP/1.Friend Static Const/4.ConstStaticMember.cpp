@@ -1,25 +1,41 @@
 /*
-Å¬·¡½º ³»¿¡ ¼±¾ğµÈ const ¸â¹öº¯¼ö(»ó¼ö)ÀÇ ÃÊ±âÈ­´Â ÀÌ´Ï¼È¶óÀÌÀú¸¦ ÅëÇØ¾ß¸¸ÇÑ´Ù.
-±×·¯³ª const staticÀ¸·Î ¼±¾ğµÇ´Â ¸â¹öº¯¼ö(»ó¼ö)´Â ´ÙÀ½°ú °°ÀÌ ¼±¾ğ°ú µ¿½Ã¿¡ ÃÊ±âÈ­°¡ °¡´ÉÇÏ´Ù.
-const static ¸â¹öº¯¼ö´Â, Å¬·¡½º°¡ Á¤ÀÇµÉ ¶§ ÁöÁ¤µÈ °ªÀÌ À¯ÁöµÇ´Â »ó¼öÀÌ±â ¶§¹®¿¡, ÃÊ±âÈ­°¡ °¡´É!!!!  
-*/ 
+í´ë˜ìŠ¤ ë‚´ì— ì„ ì–¸ëœ const ë©¤ë²„ë³€ìˆ˜(ìƒìˆ˜)ì˜ ì´ˆê¸°í™”ëŠ” ì´ë‹ˆì…œë¼ì´ì €ë¥¼ í†µí•´ì•¼ë§Œí•œë‹¤.
+ì•ì„  ì˜ˆì œì™€ ê°™ì´,
+class SoSimple
+{
+private:
+	static int simObjCnt;
+public:
+	SoSimple()
+	{
+		simObjCnt++;
+		cout << simObjCnt << "th SoSimple object" << endl;
+	}
+};
+int SoSimple::simObjCnt = 0;
+
+
+ê·¸ëŸ¬ë‚˜ const staticìœ¼ë¡œ ì„ ì–¸ë˜ëŠ” ë©¤ë²„ë³€ìˆ˜(ìƒìˆ˜)ëŠ” ë‹¤ìŒê³¼ ê°™ì´ ì„ ì–¸ê³¼ ë™ì‹œì— ì´ˆê¸°í™”ê°€ ê°€ëŠ¥í•˜ë‹¤.
+const static ë©¤ë²„ë³€ìˆ˜ëŠ”, í´ë˜ìŠ¤ê°€ ì •ì˜ë  ë•Œ ì§€ì •ëœ ê°’ì´ ìœ ì§€ë˜ëŠ” ìƒìˆ˜ì´ê¸° ë•Œë¬¸ì—, ì´ˆê¸°í™”ê°€ ê°€ëŠ¥!!!!
+*/
+
 #include <iostream>
 using namespace std;
 
 class CountryArea
 {
 public:
-	const static int RUSSIA			=1707540;
-	const static int CANADA			=998467;
-	const static int CHINA			=957290;
-	const static int SOUTH_KOREA	=9922; 
+	const static int RUSSIA = 1707540;
+	const static int CANADA = 998467;
+	const static int CHINA = 957290;
+	const static int SOUTH_KOREA = 9922;
 };
 
 int main(void)
 {
-	cout<<"·¯½Ã¾Æ ¸éÀû: "<<CountryArea::RUSSIA<<"§´"<<endl;
-	cout<<"Ä³³ª´Ù ¸éÀû: "<<CountryArea::CANADA<<"§´"<<endl;
-	cout<<"Áß±¹ ¸éÀû: "<<CountryArea::CHINA<<"§´"<<endl;
-	cout<<"ÇÑ±¹ ¸éÀû: "<<CountryArea::SOUTH_KOREA<<"§´"<<endl; // Á¤ÀÇµÈ »ó¼ö¿¡ Á¢±ÙÇÏ±â À§ÇØ¼­ ±»ÀÌ °´Ã¼¸¦ »ı¼ºÇÒ ÇÊ¿ä´Â ¾ø´Ù..  
+	cout << "ëŸ¬ì‹œì•„ ë©´ì : " << CountryArea::RUSSIA << "ã¢" << endl;
+	cout << "ìºë‚˜ë‹¤ ë©´ì : " << CountryArea::CANADA << "ã¢" << endl;
+	cout << "ì¤‘êµ­ ë©´ì : " << CountryArea::CHINA << "ã¢" << endl;
+	cout << "í•œêµ­ ë©´ì : " << CountryArea::SOUTH_KOREA << "ã¢" << endl; // ì •ì˜ëœ ìƒìˆ˜ì— ì ‘ê·¼í•˜ê¸° ìœ„í•´ì„œ êµ³ì´ ê°ì²´ë¥¼ ìƒì„±í•  í•„ìš”ëŠ” ì—†ë‹¤..  
 	return 0;
 }
