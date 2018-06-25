@@ -1,7 +1,7 @@
 /*
-mutableÀº const ÇÔ¼ö ³»¿¡¼­ÀÇ °ªÀÇ º¯°æÀ» ¿¹¿ÜÀûÀ¸·Î Çã¿ëÇÑ´Ù.
-mutableÀÇ °úµµÇÑ »ç¿ëÀº C++¿¡ ÀÖ¾î¼­
-±× Áß¿ä¼ºÀ» ÀÎÁ¤¹ŞÀº Å°¿öµåÀÎ constÀÇ ¼±¾ğÀ» ÀÇ¹Ì ¾ø°Ô ¸¸µé¾î¹ö¸°´Ù.
+mutableì€ 'const í•¨ìˆ˜' ë‚´ì—ì„œì˜ ê°’ì˜ ë³€ê²½ì„ ì˜ˆì™¸ì ìœ¼ë¡œ í—ˆìš©í•œë‹¤.
+mutableì˜ ê³¼ë„í•œ ì‚¬ìš©ì€ C++ì— ìˆì–´ì„œ
+ê·¸ ì¤‘ìš”ì„±ì„ ì¸ì •ë°›ì€ í‚¤ì›Œë“œì¸ constì˜ ì„ ì–¸ì„ ì˜ë¯¸ ì—†ê²Œ ë§Œë“¤ì–´ë²„ë¦°ë‹¤.
 */
 #include <iostream>
 using namespace std;
@@ -10,18 +10,16 @@ class SoSimple
 {
 private:
 	int num1;
-	mutable int num2; // const ÇÔ¼ö¿¡ ´ëÇØ ¿¹¿Ü¸¦ µĞ´Ù!!!  
+	mutable int num2; // const í•¨ìˆ˜ì— ëŒ€í•´ ì˜ˆì™¸ë¥¼ ë‘”ë‹¤!!!  
 public:
-	SoSimple(int n1, int n2)
-		: num1(n1), num2(n2) // initializer!!!!!!!
-	{  }
+	SoSimple(int n1, int n2) : num1(n1), num2(n2) {}
 	void ShowSimpleData() const
 	{
 		cout << num1 << ", " << num2 << endl;
 	}
 	void CopyToNum2() const
 	{
-		num2 = num1; // ¿¹¿Ü ¹®Àå!!!  
+		num2 = num1; // ì˜ˆì™¸ ë¬¸ì¥!!!  
 	}
 };
 
