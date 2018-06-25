@@ -1,23 +1,21 @@
 /*
-A Å¬·¡½º°¡ B Å¬·¡½º¸¦ ´ë»óÀ¸·Î friend¼±¾ğÀ» ÇÏ¸é, 
-B Å¬·¡½º´Â A Å¬·¡½ºÀÇ private ¸â¹ö¿¡ Á÷Á¢ Á¢±ÙÀÌ °¡´ÉÇÏ´Ù.
-´Ü, A Å¬·¡½ºµµ B Å¬·¡½ºÀÇ private ¸â¹ö¿¡ Á÷Á¢ Á¢±ÙÀÌ °¡´ÉÇÏ·Á¸é, 
-BÅ¬·¡½º°¡ AÅ¬·¡½º¸¦ ´ë»óÀ¸·Î friend ¼±¾ğÀ» ÇØÁÖ¾î¾ßÇÑ´Ù.
-
-
-!! "friend ¼±¾ğÀº Áö³ªÄ¡¸é ¾ÆÁÖÀ§ÇèÇÏ´Ù Á¤º¸Àº´ĞÀ» ¹«³Ê¶ß¸®´Â ¹®¹ıÀÌ´Ù"
+A í´ë˜ìŠ¤ê°€ B í´ë˜ìŠ¤ë¥¼ ëŒ€ìƒìœ¼ë¡œ friendì„ ì–¸ì„ í•˜ë©´,
+B í´ë˜ìŠ¤ëŠ” A í´ë˜ìŠ¤ì˜ private ë©¤ë²„ì— ì§ì ‘ ì ‘ê·¼ì´ ê°€ëŠ¥í•˜ë‹¤.
+ë‹¨, A í´ë˜ìŠ¤ë„ B í´ë˜ìŠ¤ì˜ private ë©¤ë²„ì— ì§ì ‘ ì ‘ê·¼ì´ ê°€ëŠ¥í•˜ë ¤ë©´,
+Bí´ë˜ìŠ¤ê°€ Aí´ë˜ìŠ¤ë¥¼ ëŒ€ìƒìœ¼ë¡œ friend ì„ ì–¸ì„ í•´ì£¼ì–´ì•¼í•œë‹¤.
+!! "friend ì„ ì–¸ì€ ì§€ë‚˜ì¹˜ë©´ ì•„ì£¼ìœ„í—˜í•˜ë‹¤ ì •ë³´ì€ë‹‰ì„ ë¬´ë„ˆëœ¨ë¦¬ëŠ” ë¬¸ë²•ì´ë‹¤"
 */
 #include <iostream>
 #include <cstring>
 using namespace std;
 
-class Girl; // Girl ÀÌ¶ó´Â ÀÌ¸§ÀÌ Å¬·¡½ºÀÇ ÀÌ¸§ÀÓÀ» ¾Ë¸². 
+class Girl; // Girl ì´ë¼ëŠ” ì´ë¦„ì´ í´ë˜ìŠ¤ì˜ ì´ë¦„ì„ì„ ì•Œë¦¼. 
 
 class Boy
 {
 private:
 	int height;
-	friend class Girl; // Girl Å¬·¡½º¿¡ ´ëÇÑ friend ¼±¾ğ  
+	friend class Girl; // Girl í´ë˜ìŠ¤ì— ëŒ€í•œ friend ì„ ì–¸  
 public:
 	Boy(int len) : height(len)
 	{ }
@@ -31,10 +29,10 @@ private:
 public:
 	Girl(char * num)
 	{
-		strcpy(phNum, num);
+		strcpy(phNum, num); // ì´ˆê¸°í™” ë°©ë²•!
 	}
 	void ShowYourFriendInfo(Boy &frn);
-	friend class Boy; // friend¼±¾ğ
+	friend class Boy; // friendì„ ì–¸
 };
 
 void Boy::ShowYourFriendInfo(Girl &frn)
