@@ -16,13 +16,12 @@ public:
 		num = ref.num;
 		return *this;
 	}
-	operator int()    // Çü º¯È¯ ¿¬»êÀÚÀÇ ¿À¹ö·Îµù
+	operator int() // í˜• ë³€í™˜ ì—°ì‚°ìì˜ ì˜¤ë²„ë¡œë”©
 	{
 		return num;
 	}
 	void ShowNumber() { cout << num << endl; }
 };
-
 int main(void)
 {
 	Number num1;
