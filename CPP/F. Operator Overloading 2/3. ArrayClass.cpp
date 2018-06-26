@@ -19,7 +19,6 @@ public:
 			cout << "Array index out of bound exception" << endl;
 			exit(1);
 		}
-
 		return arr[idx];
 	}
 	~BoundCheckIntArray()
@@ -27,7 +26,6 @@ public:
 		delete[]arr;
 	}
 };
-
 int main(void)
 {
 	BoundCheckIntArray arr(5);
