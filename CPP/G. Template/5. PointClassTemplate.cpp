@@ -7,14 +7,12 @@ class Point
 private:
 	T xpos, ypos;
 public:
-	Point(T x = 0, T y = 0) : xpos(x), ypos(y)
-	{  }
+	Point(T x = 0, T y = 0) : xpos(x), ypos(y) { }
 	void ShowPosition() const
 	{
 		cout << '[' << xpos << ", " << ypos << ']' << endl;
 	}
 };
-
 int main(void)
 {
 	Point<int> pos1(3, 4);
@@ -23,7 +21,7 @@ int main(void)
 	Point<double> pos2(2.4, 3.6);
 	pos2.ShowPosition();
 
-	Point<char> pos3('P', 'F');    // ÁÂÇ¥Á¤º¸¸¦ ¹®ÀÚ·Î Ç¥½ÃÇÏ´Â »óÈ²ÀÇ Ç¥Çö
+	Point<char> pos3('P', 'F'); // ì¢Œí‘œì •ë³´ë¥¼ ë¬¸ìë¡œ í‘œì‹œí•˜ëŠ” ìƒí™©ì˜ í‘œí˜„
 	pos3.ShowPosition();
 	return 0;
 	/*
