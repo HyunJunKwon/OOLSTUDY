@@ -1,5 +1,5 @@
 /*
-Pure Virtual Function�� Abstract Class
+Pure Virtual Function과 Abstract Class
 
 class Employee
 {
@@ -19,22 +19,22 @@ public:
 		return 0;
 	}
 	virtual void ShowSalaryInfo() const
-	{  
+	{
 	}
 };
-�� Ŭ������ ���� Ŭ�����μ��� �ǹ̸� ���� ��, ��ü�� ������ ��������
-���ǵ� Ŭ������ �ƴϴ�. �̷��� Ŭ���� �߿����� ��ü������
-�������� ���ǵ��� �ʴ� Ŭ������ ����...
-���� �����Լ��� ���������Լ��� �����ϸ� �Ǽ� ���� �� �ִ�.
+이 클래스는 기초 클래스로서만 의미를 가질 뿐, 객체의 생성을 목적으로
+정의된 클래스는 아니다. 이렇듯 클래스 중에서는 객체생성을
+목적으로 정의되지 않는 클래스도 존재...
+위의 가상함수를 순수가상함수로 정의하면 실수 막을 수 있다.
 virtual int GetPay() const = 0;
 virtual void ShowSalaryInfo() const = 0;
 
-�ϳ� �̻��� ����Լ��� ���� �����Լ��� ������ Ŭ������ ������
-�߻� Ŭ������ �Ѵ�.
+하나 이상의 멤버함수를 순수 가상함수로 선언한 클래스를 가리켜
+추상 클래스라 한다.
 
-���� ���� �Ҹ��ڵ� ����,,
-�� �Ʒ� ������ ����Ŭ���� �Ҹ��ڰ� ȣ��Ǹ鼭 ���� Ŭ������
-�Ҹ��ڰ� ���������� ȣ��ȴ�.
+또한 가상 소멸자도 존재,,
+맨 아래 계층의 유도클래스 소멸자가 호출되면서 기초 클래스의
+소멸자가 순차적으로 호출된다.
 */
 
 #include <iostream>
@@ -63,6 +63,7 @@ private:
 public:
 	Second(char * str1, char * str2) : First(str1)
 	{
+		// 초기화: 위의 First(str1)이 먼저 실행되고 그 다음에 밑 줄 실행.
 		strTwo = new char[strlen(str2) + 1];
 	}
 	virtual ~Second()
@@ -82,8 +83,11 @@ int main(void)
 	~First()
 	*/
 	/*
-	�� �Ʒ� ������ ����Ŭ���� �Ҹ��ڰ� ȣ��Ǹ鼭 ���� Ŭ������
-	�Ҹ��ڰ� ���������� ȣ��ȴ�.
+	맨 아래 계층의 유도클래스 소멸자가 호출되면서 기초 클래스의
+	소멸자가 순차적으로 호출된다.
+	
+	또한 위의 코드에 구조의 대해선 Second형으로 new를 했지만, First형 포인터이므로
+	First에 있는 데이터에만 접근 가능하다.
 	*/
 	return 0;
 }
