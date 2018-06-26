@@ -1,12 +1,12 @@
 /*
-¿¬»êÀÚ ¿À¹ö·Îµù: ¿¬»êÀÚ°¡ ÇÏ´Â ÀÏÀ» ÇÔ¼ö·Î °³ÀÎÀÇ ÇÊ¿ä¿¡ ¸Â°Ô ±¸ÇöÇÑ °Í.
+ì—°ì‚°ìž ì˜¤ë²„ë¡œë”©: ì—°ì‚°ìžê°€ í•˜ëŠ” ì¼ì„ í•¨ìˆ˜ë¡œ ê°œì¸ì˜ í•„ìš”ì— ë§žê²Œ êµ¬í˜„í•œ ê²ƒ.
 
-¿¬»êÀÚ¸¦ ¿À¹ö·Îµù ÇÏ´Â ¹æ¹ý¿¡´Â ´ÙÀ½ µÎ °¡Áö°¡ ÀÖ´Ù. (pos1 + pos2)
--¸â¹öÇÔ¼ö¿¡ ÀÇÇÑ ¿¬»êÀÚ ¿À¹ö·Îµù pos1.operator+(pos2);
--Àü¿ªÇÔ¼ö¿¡ ÀÇÇÑ ¿¬»êÀÚ ¿À¹ö·Îµù operator+(pos1, pos2);
+ì—°ì‚°ìžë¥¼ ì˜¤ë²„ë¡œë”© í•˜ëŠ” ë°©ë²•ì—ëŠ” ë‹¤ìŒ ë‘ ê°€ì§€ê°€ ìžˆë‹¤. (pos1 + pos2)
+-ë©¤ë²„í•¨ìˆ˜ì— ì˜í•œ ì—°ì‚°ìž ì˜¤ë²„ë¡œë”© pos1.operator+(pos2);
+-ì „ì—­í•¨ìˆ˜ì— ì˜í•œ ì—°ì‚°ìž ì˜¤ë²„ë¡œë”© operator+(pos1, pos2);
 
-¸â¹öÇÔ¼ö ±â¹ÝÀ¸·Î ¿À¹ö·Îµù µÈ ÇÔ¼ö°¡ Àü¿ªÇÔ¼ö ±â¹ÝÀ¸·Î ¿À¹ö·Îµù µÈ
-ÇÔ¼öº¸´Ù ¿ì¼±½ÃµÇ¾î È£ÃâµÈ´Ù.
+ë©¤ë²„í•¨ìˆ˜ ê¸°ë°˜ìœ¼ë¡œ ì˜¤ë²„ë¡œë”© ëœ í•¨ìˆ˜ê°€ ì „ì—­í•¨ìˆ˜ ê¸°ë°˜ìœ¼ë¡œ ì˜¤ë²„ë¡œë”© ëœ
+í•¨ìˆ˜ë³´ë‹¤ ìš°ì„ ì‹œë˜ì–´ í˜¸ì¶œëœë‹¤.
 
 */
 #include <iostream>
@@ -23,15 +23,15 @@ public:
 	{
 		cout << '[' << xpos << ", " << ypos << ']' << endl;
 	}
-	Point operator+(const Point &ref)    //operator+¶ó´Â ÀÌ¸§ÀÇ ÇÔ¼ö ¸â¹öÇÔ¼ö Çü½Ä  
+	Point operator+(const Point &ref)    //operator+ë¼ëŠ” ì´ë¦„ì˜ í•¨ìˆ˜ ë©¤ë²„í•¨ìˆ˜ í˜•ì‹  
 	{
 		Point pos(xpos + ref.xpos, ypos + ref.ypos);
 		return pos;
 	}
-	friend Point operator+(const Point &pos1, const Point &pos2); // 18Çà: ÇÔ¼ö¿¡ ´ëÇØ private¿µ¿ªÀÇ Á¢±ÙÀ» Çã¿ëÇÏ±â À§ÇØ..  
+	friend Point operator+(const Point &pos1, const Point &pos2); // í•¨ìˆ˜ì— ëŒ€í•´ privateì˜ì—­ì˜ ì ‘ê·¼ì„ í—ˆìš©í•˜ê¸° ìœ„í•´..  
 };
 
-Point operator+(const Point &pos1, const Point &pos2) // Àü¿ªÇÔ¼ö ÇüÅÂ   
+Point operator+(const Point &pos1, const Point &pos2) // ì „ì—­í•¨ìˆ˜ í˜•íƒœ   
 {
 	Point pos(pos1.xpos + pos2.xpos, pos1.ypos + pos2.ypos);
 	return pos;
