@@ -8,11 +8,11 @@ private:
 public:
 	Point(int x = 0, int y = 0) : xpos(x), ypos(y)
 	{
-		cout << "Point 按眉 积己" << endl;
+		cout << "Point 臧濎泊 靸濎劚" << endl;
 	}
 	~Point()
 	{
-		cout << "Point 按眉 家戈" << endl;
+		cout << "Point 臧濎泊 靻岆└" << endl;
 	}
 	void SetPos(int x, int y)
 	{
@@ -32,9 +32,7 @@ class SmartPtr
 private:
 	Point * posptr;
 public:
-	SmartPtr(Point * ptr) : posptr(ptr)
-	{  }
-
+	SmartPtr(Point * ptr) : posptr(ptr) { }
 	Point& operator*() const
 	{
 		return *posptr;
@@ -66,17 +64,17 @@ int main(void)
 	cout << *sptr3;
 	return 0;
 	/*
-	Point 按眉 积己
-	Point 按眉 积己
-	Point 按眉 积己
+	Point 臧濎泊 靸濎劚
+	Point 臧濎泊 靸濎劚
+	Point 臧濎泊 靸濎劚
 	[1, 2]
 	[2, 3]
 	[4, 5]
 	[10, 20]
 	[30, 40]
 	[50, 60]
-	Point 按眉 家戈
-	Point 按眉 家戈
-	Point 按眉 家戈
+	Point 臧濎泊 靻岆└
+	Point 臧濎泊 靻岆└
+	Point 臧濎泊 靻岆└
 	*/
 }
