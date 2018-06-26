@@ -26,8 +26,8 @@ int main(void)
 	num.ShowNumber();
 	/*
 	output:
-	Number(int n=0) // ÃÊ±âÈ­¿¡ ÀÇÇØ
-	Number(int n=0) // num = 30¿¡ ÀÇÇØ
+	Number(int n=0) // 초기화에 의해
+	Number(int n=0) // num = 30에 의해.
 	operator=()
 	30
 	*/
