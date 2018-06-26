@@ -6,7 +6,6 @@ void ShowData(double num)
 {
 	cout << (T1)num << ", " << (T2)num << endl;
 }
-
 int main(void)
 {
 	ShowData<char, int>(65);
