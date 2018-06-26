@@ -15,22 +15,21 @@ public:
 		age = myage;
 	}
 	/*
-	Person& Person::operator=(const Person& ref) // ÀÌ·¸°Ô ±íÀº º¹»ç¸¦ ÇØ¾ßÇÑ´Ù!!!!
+	Person& Person::operator=(const Person& ref) // ì´ë ‡ê²Œ ê¹Šì€ ë³µì‚¬ë¥¼ í•´ì•¼í•œë‹¤!!!!
 	{
-	delete []name;
-
-	int len=strlen(ref.name)+1;
-	name= new char[len];
-	strcpy(name, ref.name);
-	age=ref.age;
-	return *this;
+		delete []name;
+		int len=strlen(ref.name)+1;
+		name= new char[len];
+		strcpy(name, ref.name);
+		age=ref.age;
+		return *this;
 	}
 	*/
 
 	void ShowPersonInfo() const
 	{
-		cout << "ÀÌ¸§: " << name << endl;
-		cout << "³ªÀÌ: " << age << endl;
+		cout << "NAME: " << name << endl;
+		cout << "AGE: " << age << endl;
 	}
 
 	~Person()
@@ -38,9 +37,9 @@ public:
 		delete[]name;
 		cout << "called destructor!" << endl;
 	}
-	// ÀÌ ¹®Á¦¿¡¼­´Â µÎ °³ÀÇ °´Ã¤°¡ °°Àº ¸Ş¸ğ¸®¿µ¿ªÀ» Âü°íÇÏ°íÀÖ±â ¶§¹®¿¡
-	// ÀÌ¹Ì man1¿¡¼­ ¼Ò¸êÀÚ°¡ ½ÇÇàµÈ µÚ man2¿¡¼­ ½ÇÇàÇØ, ÇÁ·Î±×·¥ ¿À·ù°¡ ³­´Ù.
-	// ÀÌ¸¦ À§ÇØ ±íÀº º¹»ç°¡ ÇÊ¿äÇÑ °Í!
+	// ì´ ë¬¸ì œì—ì„œëŠ” ë‘ ê°œì˜ ê°ì±„ê°€ ê°™ì€ ë©”ëª¨ë¦¬ì˜ì—­ì„ ì°¸ê³ í•˜ê³ ìˆê¸° ë•Œë¬¸ì—
+	// ì´ë¯¸ man1ì—ì„œ ì†Œë©¸ìê°€ ì‹¤í–‰ëœ ë’¤ man2ì—ì„œ ì‹¤í–‰í•´, í”„ë¡œê·¸ë¨ ì˜¤ë¥˜ê°€ ë‚œë‹¤.
+	// ì´ë¥¼ ìœ„í•´ ê¹Šì€ ë³µì‚¬ê°€ í•„ìš”í•œ ê²ƒ!
 };
 
 int main(void)
@@ -50,5 +49,7 @@ int main(void)
 	man2 = man1;
 	man1.ShowPersonInfo();
 	man2.ShowPersonInfo();
+	// ìœ„ ë¬¸ì¥ì´ ëë‚œ í›„ ê° classëŠ” destructorë¥¼ ì‹¤í–‰í•˜ëŠ”ë°, man1ê³¼ man2ê°€ ê°€ë¦¬í‚¤ëŠ” ê³³ì´
+	// ê°™ì€ë° man1ì„ ì§€ìš°ê³  ë‚œ í›„, man2ëŠ” ê°€ë¦¬í‚¤ëŠ” ê³³ì´ ì—†ë‹¤ -> ì˜¤ë¥˜ë°œìƒ
 	return 0;
 }
