@@ -1,37 +1,32 @@
 /*
-ÄÁÆ®·Ñ Å¬·¡½ºÀÇ Æ¯Â¡
--ÇÁ·Î±×·¥ ÀüÃ¼ÀÇ ±â´ÉÀ» ´ã´çÇÑ´Ù. µû¶ó¼­ ±â´ÉÀû ¼º°İÀÌ °­ÇÑ Å¬·¡½ºÀÌ´Ù.
--ÄÁÆ®·Ñ Å¬·¡½º¸¸ ºÁµµ ÇÁ·Î±×·¥ÀÇ ÀüÃ¼ ±â´É°ú Èå¸§À» ÆÄ¾ÇÇÒ ¼ö ÀÖ´Ù.
+ì»¨íŠ¸ë¡¤ í´ë˜ìŠ¤ì˜ íŠ¹ì§•
+	-í”„ë¡œê·¸ë¨ ì „ì²´ì˜ ê¸°ëŠ¥ì„ ë‹´ë‹¹í•œë‹¤. ë”°ë¼ì„œ ê¸°ëŠ¥ì  ì„±ê²©ì´ ê°•í•œ í´ë˜ìŠ¤ì´ë‹¤.
+	-ì»¨íŠ¸ë¡¤ í´ë˜ìŠ¤ë§Œ ë´ë„ í”„ë¡œê·¸ë¨ì˜ ì „ì²´ ê¸°ëŠ¥ê³¼ íë¦„ì„ íŒŒì•…í•  ìˆ˜ ìˆë‹¤.
 
-Entity Å¬·¡½ºÀÇ Æ¯Â¡
--µ¥ÀÌÅÍÀû ¼º°İÀÌ °­ÇÏ´Ù. µû¶ó¼­ ÆÄÀÏ ¹× µ¥ÀÌÅÍ º£ÀÌ½º¿¡ ÀúÀåµÇ´Â µ¥ÀÌÅÍ¸¦ ¼ÒÀ¯ÇÏ°í ÀÖ´Ù.
--ÇÁ·Î±×·¥ÀÇ ±â´ÉÀ» ÆÄ¾ÇÇÏ´Âµ¥ µµ¿òÀ» ÁÖÁö´Â ¸øÇÑ´Ù.
--±×·¯³ª ÇÁ·Î±×·¥»ó¿¡¼­ °ü¸®µÇ´Â µ¥ÀÌÅÍÀÇ Á¾·ù¸¦ ÆÄ¾ÇÇÏ´Â µ¥´Â µµ¿òÀÌ µÈ´Ù.
-
---> ±â´ÉÀû ¼º°İÀÌ °­ÇÑ ÄÁÆ®·Ñ Å¬·¡½º¸¦ µîÀå½ÃÅ°¸é, ¿ì¸®°¡ ±¸ÇöÇÏ°í ÀÖ´Â ´Ü°èº° ÇÁ·ÎÁ§Æ®¿¡¼­ Àü¿ªÇÔ¼öµéÀ» ¾ø¾Ù ¼ö ÀÖ´Ù. ÀÌµéÀ» ÇÏ³ªÀÇ ÄÁÆ®·Ñ Å¬·¡½º·Î ¹­À» ¼ö ÀÖ±â ¶§¹®.
+Entity í´ë˜ìŠ¤ì˜ íŠ¹ì§•
+	-ë°ì´í„°ì  ì„±ê²©ì´ ê°•í•˜ë‹¤. ë”°ë¼ì„œ íŒŒì¼ ë° ë°ì´í„° ë² ì´ìŠ¤ì— ì €ì¥ë˜ëŠ” ë°ì´í„°ë¥¼ ì†Œìœ í•˜ê³  ìˆë‹¤.
+	-í”„ë¡œê·¸ë¨ì˜ ê¸°ëŠ¥ì„ íŒŒì•…í•˜ëŠ”ë° ë„ì›€ì„ ì£¼ì§€ëŠ” ëª»í•œë‹¤.
+	-ê·¸ëŸ¬ë‚˜ í”„ë¡œê·¸ë¨ìƒì—ì„œ ê´€ë¦¬ë˜ëŠ” ë°ì´í„°ì˜ ì¢…ë¥˜ë¥¼ íŒŒì•…í•˜ëŠ” ë°ëŠ” ë„ì›€ì´ ëœë‹¤.
+		--> ê¸°ëŠ¥ì  ì„±ê²©ì´ ê°•í•œ ì»¨íŠ¸ë¡¤ í´ë˜ìŠ¤ë¥¼ ë“±ì¥ì‹œí‚¤ë©´, ìš°ë¦¬ê°€ êµ¬í˜„í•˜ê³  ìˆëŠ” ë‹¨ê³„ë³„ í”„ë¡œì íŠ¸ì—ì„œ ì „ì—­í•¨ìˆ˜ë“¤ì„ ì—†ì•¨ ìˆ˜ ìˆë‹¤. ì´ë“¤ì„ í•˜ë‚˜ì˜ ì»¨íŠ¸ë¡¤ í´ë˜ìŠ¤ë¡œ ë¬¶ì„ ìˆ˜ ìˆê¸° ë•Œë¬¸.
 */
 
 #include <iostream>
 #include <cstring>
-
 using namespace std;
 const int NAME_LEN = 20;
 
 enum { MAKE = 1, DEPOSIT, WITHDRAW, INQUIRE, EXIT };
 
-
 /*
-* Å¬·¡½º ÀÌ¸§: Account
-* Å¬·¡½º À¯Çü: Entity Å¬·¡½º
+* í´ë˜ìŠ¤ ì´ë¦„: Account
+* í´ë˜ìŠ¤ ìœ í˜•: Entity í´ë˜ìŠ¤
 */
-
 class Account
 {
 private:
 	int accID;
 	int balance;
 	char * cusName;
-
 public:
 	Account(int ID, int money, char * name);
 	Account(const Account & ref);
@@ -42,61 +37,51 @@ public:
 	void ShowAccInfo() const;
 	~Account();
 };
-
-Account::Account(int ID, int money, char * name)
-	: accID(ID), balance(money)
+Account::Account(int ID, int money, char * name) : accID(ID), balance(money)
 {
 	cusName = new char[strlen(name) + 1];
 	strcpy(cusName, name);
 }
-
-Account::Account(const Account & ref)
-	: accID(ref.accID), balance(ref.balance)
+Account::Account(const Account & ref) : accID(ref.accID), balance(ref.balance)
 {
 	cusName = new char[strlen(ref.cusName) + 1];
 	strcpy(cusName, ref.cusName);
 }
-
-int Account::GetAccID() const { return accID; }
-
+int Account::GetAccID() const 
+{ 
+	return accID; 
+}
 void Account::Deposit(int money)
 {
 	balance += money;
 }
-
 int Account::Withdraw(int money)
 {
-	if (balance<money)
+	if (balance < money)
 		return 0;
-
 	balance -= money;
 	return money;
 }
-
 void Account::ShowAccInfo() const
 {
-	cout << "°èÁÂID: " << accID << endl;
-	cout << "ÀÌ  ¸§: " << cusName << endl;
-	cout << "ÀÜ  ¾×: " << balance << endl;
+	cout << "Account ID: " << accID << endl;
+	cout << "Name      : " << cusName << endl;
+	cout << "Balance   : " << balance << endl;
 }
-
 Account::~Account()
 {
 	delete[]cusName;
 }
 
-
 /*
-* Å¬·¡½º ÀÌ¸§: AccountHandler
-* Å¬·¡½º À¯Çü: ÄÁÆ®·Ñ(Control) Å¬·¡½º
+* í´ë˜ìŠ¤ ì´ë¦„: AccountHandler
+* í´ë˜ìŠ¤ ìœ í˜•: ì»¨íŠ¸ë¡¤(Control) í´ë˜ìŠ¤
 */
-
 class AccountHandler
 {
 private:
 	Account * accArr[100];
 	int accNum;
-
 public:
 	AccountHandler();
 	void ShowMenu(void) const;
@@ -106,59 +91,55 @@ public:
 	void ShowAllAccInfo(void) const;
 	~AccountHandler();
 };
-
 void AccountHandler::ShowMenu(void) const
 {
 	cout << "-----Menu------" << endl;
-	cout << "1. °èÁÂ°³¼³" << endl;
-	cout << "2. ÀÔ    ±İ" << endl;
-	cout << "3. Ãâ    ±İ" << endl;
-	cout << "4. °èÁÂÁ¤º¸ ÀüÃ¼ Ãâ·Â" << endl;
-	cout << "5. ÇÁ·Î±×·¥ Á¾·á" << endl;
+	cout << "1. Create Account" << endl;
+	cout << "2. Deposit" << endl;
+	cout << "3. Withdraw" << endl;
+	cout << "4. Print Out All Account Information" << endl;
+	cout << "5. Exit Program" << endl;
 }
-
 void AccountHandler::MakeAccount(void)
 {
 	int id;
 	char name[NAME_LEN];
 	int balance;
 
-	cout << "[°èÁÂ°³¼³]" << endl;
-	cout << "°èÁÂID: ";	cin >> id;
-	cout << "ÀÌ  ¸§: ";	cin >> name;
-	cout << "ÀÔ±İ¾×: ";	cin >> balance;
+	cout << "[Create Account]" << endl;
+	cout << "Account ID: ";	cin >> id;
+	cout << "Name: ";	cin >> name;
+	cout << "Initial Deposit Amout: "; cin >> balance;
 	cout << endl;
 
 	accArr[accNum++] = new Account(id, balance, name);
 }
-
 void AccountHandler::DepositMoney(void)
 {
 	int money;
 	int id;
-	cout << "[ÀÔ    ±İ]" << endl;
-	cout << "°èÁÂID: ";	cin >> id;
-	cout << "ÀÔ±İ¾×: ";	cin >> money;
+	cout << "[Deposit]" << endl;
+	cout << "Account ID: ";	cin >> id;
+	cout << "Deposit Amount: ";	cin >> money;
 
 	for (int i = 0; i<accNum; i++)
 	{
 		if (accArr[i]->GetAccID() == id)
 		{
 			accArr[i]->Deposit(money);
-			cout << "ÀÔ±İ¿Ï·á" << endl << endl;
+			cout << "Deposit Completed" << endl << endl;
 			return;
 		}
 	}
-	cout << "À¯È¿ÇÏÁö ¾ÊÀº ID ÀÔ´Ï´Ù." << endl << endl;
+	cout << "Invalid ID." << endl << endl;
 }
-
 void AccountHandler::WithdrawMoney(void)
 {
 	int money;
 	int id;
-	cout << "[Ãâ    ±İ]" << endl;
-	cout << "°èÁÂID: ";	cin >> id;
-	cout << "Ãâ±İ¾×: ";	cin >> money;
+	cout << "[Withdraw]" << endl;
+	cout << "Account ID: ";	cin >> id;
+	cout << "Withdraw Amount: "; cin >> money;
 
 	for (int i = 0; i<accNum; i++)
 	{
@@ -166,20 +147,18 @@ void AccountHandler::WithdrawMoney(void)
 		{
 			if (accArr[i]->Withdraw(money) == 0)
 			{
-				cout << "ÀÜ¾×ºÎÁ·" << endl << endl;
+				cout << "Not Enough Balance" << endl << endl;
 				return;
 			}
 
-			cout << "Ãâ±İ¿Ï·á" << endl << endl;
+			cout << "Deposit Completed" << endl << endl;
 			return;
 		}
 	}
-	cout << "À¯È¿ÇÏÁö ¾ÊÀº ID ÀÔ´Ï´Ù." << endl << endl;
+	cout << "Invalid ID" << endl << endl;
 }
-
 AccountHandler::AccountHandler() : accNum(0)
 {  }
-
 void AccountHandler::ShowAllAccInfo(void) const
 {
 	for (int i = 0; i<accNum; i++)
@@ -188,16 +167,14 @@ void AccountHandler::ShowAllAccInfo(void) const
 		cout << endl;
 	}
 }
-
 AccountHandler::~AccountHandler()
 {
 	for (int i = 0; i<accNum; i++)
 		delete accArr[i];
 }
 
-
 /*
-* ÄÁÆ®·Ñ Å¬·¡½º AccountHandler Áß½ÉÀ¸·Î º¯°æµÈ main ÇÔ¼ö
+* ì»¨íŠ¸ë¡¤ í´ë˜ìŠ¤ AccountHandler ì¤‘ì‹¬ìœ¼ë¡œ ë³€ê²½ëœ main í•¨ìˆ˜
 */
 
 int main(void)
@@ -208,7 +185,7 @@ int main(void)
 	while (1)
 	{
 		manager.ShowMenu();
-		cout << "¼±ÅÃ: ";
+		cout << "choice: ";
 		cin >> choice;
 		cout << endl;
 
@@ -232,6 +209,5 @@ int main(void)
 			cout << "Illegal selection.." << endl;
 		}
 	}
-
 	return 0;
 }
