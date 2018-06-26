@@ -1,36 +1,33 @@
 /*
-C++¿¡¼­, AAAÇü Æ÷ÀÎÅÍ º¯¼ö´Â
-AAA °´Ã¼ ¶Ç´Â AAA¸¦ Á÷Á¢ È¤Àº °£Á¢ÀûÀ¸·Î »ó¼ÓÇÏ´Â
-¸ðµç °´Ã¼¸¦ °¡¸®Å³ ¼ö ÀÖ´Ù.(°´Ã¼ÀÇ ÁÖ¼Ò °ªÀ» ÀúÀåÇÒ ¼ö ÀÖ´Ù)
-
+C++ì—ì„œ, AAAí˜• í¬ì¸í„° ë³€ìˆ˜ëŠ”
+AAA ê°ì²´ ë˜ëŠ” AAAë¥¼ ì§ì ‘ í˜¹ì€ ê°„ì ‘ì ìœ¼ë¡œ ìƒì†í•˜ëŠ”
+ëª¨ë“  ê°ì²´ë¥¼ ê°€ë¦¬í‚¬ ìˆ˜ ìžˆë‹¤.(ê°ì²´ì˜ ì£¼ì†Œ ê°’ì„ ì €ìž¥í•  ìˆ˜ ìžˆë‹¤)
 int main(void)
 {
-Base * bptr = new Derived(); // ÄÄÆÄÀÏ ok
-bptr->DerivedFunc(); // ÄÄÆÄÀÏ err
+	Base * bptr = new Derived(); // ì»´íŒŒì¼ ok
+	bptr->DerivedFunc(); // ì»´íŒŒì¼ err
 }
--> C++ ÄÄÆÄÀÏ·¯´Â Æ÷ÀÎÅÍ ¿¬»êÀÇ °¡´É¼º ¿©ºÎ¸¦ ÆÇ´Ü ÇÒ ¶§,
-Æ÷ÀÎÅÍÀÇ ÀÚ·áÇüÀ» ±âÁØÀ¸·Î ÆÇ´ÜÇÏÁö, ½ÇÁ¦ °¡¸®Å°´Â °´Ã¼ÀÇ
-ÀÚ·áÇüÀ» ±âÁØÀ¸·Î ÆÇ´ÜÇÏÁö ¾Ê´Â´Ù.
+	-> 
+	C++ ì»´íŒŒì¼ëŸ¬ëŠ” í¬ì¸í„° ì—°ì‚°ì˜ ê°€ëŠ¥ì„± ì—¬ë¶€ë¥¼ íŒë‹¨ í•  ë•Œ,
+	í¬ì¸í„°ì˜ ìžë£Œí˜•ì„ ê¸°ì¤€ìœ¼ë¡œ íŒë‹¨í•˜ì§€, ì‹¤ì œ ê°€ë¦¬í‚¤ëŠ” ê°ì²´ì˜
+	ìžë£Œí˜•ì„ ê¸°ì¤€ìœ¼ë¡œ íŒë‹¨í•˜ì§€ ì•ŠëŠ”ë‹¤.
 int main(void)
 {
-Derived * dptr = new Derived(); // ÄÄÆÄÀÏ ok
-Base  * bptr = dptr ; // ÄÄÆÄÀÏ ok
+	Derived * dptr = new Derived(); // ì»´íŒŒì¼ ok
+	Base  * bptr = dptr ; // ì»´íŒŒì¼ ok
 }
-dptrÀº Derived Å¬·¡½ºÀÇ Æ÷ÀÎÅÍ º¯¼ö´Ï±î, ÀÌ Æ÷ÀÎÅÍ°¡ °¡¸®Å°´Â °´Ã¼´Â
-ºÐ¸í Base Å¬·¡½º¸¦ Á÷Á¢ È¤Àº °£Á¢ÀûÀ¸·Î »ó¼ÓÇÏ´Â °´Ã¼ÀÌ´Ù.
-±×·¯´Ï BaseÇü Æ÷ÀÎÅÍ º¯¼ö·Îµµ ÂüÁ¶°¡ °¡´É!!
+dptrì€ Derived í´ëž˜ìŠ¤ì˜ í¬ì¸í„° ë³€ìˆ˜ë‹ˆê¹Œ, ì´ í¬ì¸í„°ê°€ ê°€ë¦¬í‚¤ëŠ” ê°ì²´ëŠ”
+ë¶„ëª… Base í´ëž˜ìŠ¤ë¥¼ ì§ì ‘ í˜¹ì€ ê°„ì ‘ì ìœ¼ë¡œ ìƒì†í•˜ëŠ” ê°ì²´ì´ë‹¤.
+ê·¸ëŸ¬ë‹ˆ Baseí˜• í¬ì¸í„° ë³€ìˆ˜ë¡œë„ ì°¸ì¡°ê°€ ê°€ëŠ¥!!
 base *
-¡é
-derived * ¡ãÇÒ´ç°¡´É
-
-!!! °á·ÐÀûÀ¸·Î´Â Æ÷ÀÎÅÍÇü¿¡ ÇØ´çÇÏ´Â Å¬·¡½º¿¡ Á¤ÀÇµÈ ¸â¹ö¿¡¸¸ Á¢±Ù °¡´É!!!
-
-°¡»óÇÔ¼ö°¡ ¼±¾ðµÇ¸é ÀÌ ÇÔ¼ö¸¦ ¿À¹ö¶óÀÌµù ÇÏ´Â ÇÔ¼öµµ °¡»óÇÔ¼ö°¡ µÈ´Ù.
+â†“
+derived * â–²í• ë‹¹ê°€ëŠ¥
+!!! ê²°ë¡ ì ìœ¼ë¡œëŠ” í¬ì¸í„°í˜•ì— í•´ë‹¹í•˜ëŠ” í´ëž˜ìŠ¤ì— ì •ì˜ëœ ë©¤ë²„ì—ë§Œ ì ‘ê·¼ ê°€ëŠ¥!!!
+ê°€ìƒí•¨ìˆ˜ê°€ ì„ ì–¸ë˜ë©´ ì´ í•¨ìˆ˜ë¥¼ ì˜¤ë²„ë¼ì´ë”© í•˜ëŠ” í•¨ìˆ˜ë„ ê°€ìƒí•¨ìˆ˜ê°€ ëœë‹¤.
 */
 
 #include <iostream>
 using namespace std;
-
 class First
 {
 public:
@@ -39,7 +36,6 @@ public:
 		cout << "FirstFunc" << endl;
 	}
 };
-
 class Second : public First
 {
 public:
@@ -48,7 +44,6 @@ public:
 		cout << "SecondFunc" << endl;
 	}
 };
-
 class Third : public Second
 {
 public:
@@ -57,19 +52,19 @@ public:
 		cout << "ThirdFunc" << endl;
 	}
 };
-
 int main(void)
 {
 	// First >= Second >= Third
-	Third * tptr = new Third(); // »ý¼º
+	Third * tptr = new Third(); // ìƒì„±
 	Second * sptr = tptr;
 	First * fptr = sptr;
-	// ÇÒ´çÇÒ¶§´Â ¿ÞÂÊ ÀÚ·áÇüÀÌ ´õ ¹üÀ§°¡ Ä¿¼­ °¡´ÉÇÏ°í
-	// ÇÔ¼ö¿¡ Á¢±ÙÇÒ¶§´Â ÁøÂ¥ ÀÚ·áÇü¿¡ µû¶ó Á¢±ÙÇÏ´Âµí?
+	// (F + S + T)ë¥¼ ê°€ì§„ tptrì„ (S + T)ê°€ì§„ sptrì— í• ë‹¹,
+	// ë˜í•œ ì´ë¥¼ fptrì— í• ë‹¹. ê²°ë¡ ì ìœ¼ë¡œ (F + S + T)ë¥¼ ê°€ì§.
+	// ë°‘ì˜ ì½”ë“œë¥¼ ì‹¤í–‰í•˜ë©´, ì œì¼ ë§ˆì§€ë§‰ìœ¼ë¡œ ì˜¤ë²„ë¼ì´ë”©ëœ tptrì˜ MyFunc()ê°€ ì‹¤í–‰
 	fptr->MyFunc();
 	sptr->MyFunc();
 	tptr->MyFunc();
-	/* output:  
+	/* output:
 	third
 	third
 	third
