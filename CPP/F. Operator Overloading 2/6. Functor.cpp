@@ -6,21 +6,18 @@ class Point
 private:
 	int xpos, ypos;
 public:
-	Point(int x = 0, int y = 0) : xpos(x), ypos(y)
-	{  }
+	Point(int x = 0, int y = 0) : xpos(x), ypos(y) { }
 	Point operator+(const Point & pos) const
 	{
 		return Point(xpos + pos.xpos, ypos + pos.ypos);
 	}
 	friend ostream& operator<<(ostream& os, const Point& pos);
 };
-
 ostream& operator<<(ostream& os, const Point& pos)
 {
 	os << '[' << pos.xpos << ", " << pos.ypos << ']' << endl;
 	return os;
 }
-
 class Adder
 {
 public:
