@@ -18,7 +18,6 @@ public:
 	}
 	void ShowNumber() { cout << num << endl; }
 };
-
 int main(void)
 {
 	Number num;
@@ -27,8 +26,8 @@ int main(void)
 	num.ShowNumber();
 	/*
 	output:
-	Number(int n=0) // ÃÊ±âÈ­¿¡ ÀÇÇØ
-	Number(int n=0) // num = 30¿¡ ÀÇÇØ
+	Number(int n=0) // ÃƒÃŠÂ±Ã¢ÃˆÂ­Â¿Â¡ Ã€Ã‡Ã‡Ã˜
+	Number(int n=0) // num = 30Â¿Â¡ Ã€Ã‡Ã‡Ã˜
 	operator=()
 	30
 	*/
